@@ -8,7 +8,6 @@
     "react-dom": "^16.8.6",
     "react-native-cli": "^2.0.1",
     "react-native-web": "^0.11.4",
-    "react-native-web-swiper": "^1.15.1",
     "react-scripts": "3.0.1"
   },
   "scripts": {

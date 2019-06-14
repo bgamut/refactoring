@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Context } from "../context";
 import Post from "./Post"
 import {View} from 'react-native'
+
 //import Swiper from 'react-native-swiper'
 //import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures'
 // const panRes = PanResponder.create({

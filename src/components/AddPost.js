@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Context } from "../context";
-import {TextInput,View,TouchableOpacity} from "react-native"
+import {TextInput,View,TouchableOpacity,Dimensions} from "react-native"
 
 const AddPost = () => {
 const [state, setState] = useContext(Context);
@@ -25,8 +25,9 @@ const[userInput,setUserInput,Refs] = useState("")
 // // this.refs.addPost.value=""
 //     },[state.posts]
 // );
-
-
+   
+    // window.addEventListener("resize", updateDimensions);
+    // window.addEventListener("orientationchange",updateDimensions);
     const addTodo = () => {
     //e.preventDefault();
     //setTrackTitle(userInput);
@@ -67,7 +68,14 @@ const[userInput,setUserInput,Refs] = useState("")
 
   return (
     // eslint-disable-next-line no-use-before-define
-    <View style={{marginTop:1,borderColor:'transparent',borderWidth:1,flexDirection:'row',flex:1}}>
+    <View style={{
+      marginTop:1,
+      borderColor:'transparent',
+      borderWidth:1,
+      flexDirection:'row',
+      flex:1,
+      // width:Dimensions.get('window').width,
+    }}>
       {/* <form onSubmit={addTodo}  style={{
               margin:1,
               borderColor:'#cfcfcf',
@@ -105,6 +113,7 @@ const[userInput,setUserInput,Refs] = useState("")
             onSubmitEditing={addTodo}
             returnKeyType='search'
             clearButtonMode="while-editing"
+            autoFocus
             style={{
               marginLeft:1,
               paddingLeft:3,
@@ -118,7 +127,8 @@ const[userInput,setUserInput,Refs] = useState("")
               // shadowOffset: {width: 0, height: 0},
               // shadowRadius: 1,
               color:'black',
-              paddingBottom:2,
+              // paddingBottom:2,
+              height:22,
               // textShadowColor: 'rgba(1, 1, 1, 1)',
               // textShadowOffset: {width: 0, height: 0},
               // textShadowRadius: 5

@@ -1,7 +1,8 @@
 import React from 'react';
 import {View,Text} from 'react-native'
 //import Swiper from 'react-native-swiper'
-import Swiper from 'react-native-web-swiper'
+//import Swiper from 'react-native-web-swiper'
+//import Swiper from './Swiper'
 const Post = props => {
   const { post } = props;
   return (
@@ -13,23 +14,23 @@ const Post = props => {
     }}>
        
             <View style={{
-                        marginTop:2,
-                        marginLeft:2,
-                        //marginRight:2,
-                        //padding:1,
-                        paddingBottom:2,
-                        height:22,
-                        backgroundColor:'#ffffff',
-                        alignItems:'center',
-                        justifyContent:'center',
-                        flexDirection:'row',
-                        flex:1,
-                        fontSize:12,
+
                         borderColor:'#cfcfcf',
                         borderRadius:2,
-                        color:'black',
+                        alignItems:'center',
                         borderWidth:1,
-                        textAlign:'center',
+                        flex:1,
+                        flexDirection:'row',
+                        height:22,
+                        justifyContent:'center',
+                        marginLeft:2,
+                        //marginRight:2,
+                        marginTop:2,
+                        //padding:1,
+                        paddingBottom:2,
+                        backgroundColor:'#ffffff',
+                        outlineColor:'aaaaaa',
+                        
                         }}>
                             
                 <Text>
@@ -49,12 +50,12 @@ const Post = props => {
                         justifyContent:'center',
                         flexDirection:'row',
                         //flex:1,
-                        fontSize:12,
+                       
                         borderColor:'#cfcfcf',
                         borderRadius:2,
-                        color:'black',
+                        outlineColor:'black',
                         borderWidth:1,
-                        textAlign:'center',
+                        //textAlign:'center',
                         }}>
                 <Text>
                     O
@@ -73,12 +74,12 @@ const Post = props => {
                         justifyContent:'center',
                         flexDirection:'row',
                         //flex:1,
-                        fontSize:12,
+                       
                         borderColor:'#cfcfcf',
                         borderRadius:2,
-                        color:'black',
+                        outlineColor:'black',
                         borderWidth:1,
-                        textAlign:'center',
+                        //textAlign:'center',
                         }}>
                 <Text>
                     X
