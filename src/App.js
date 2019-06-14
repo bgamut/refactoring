@@ -6,13 +6,17 @@ import Home from './components/Home'
 import Posts from './components/Posts'
 import AddPost from './components/AddPost'
 import Swiper from './components/Swiper'
-import ScrollableHeader from './components/ScrollableHeader'
+//import ScrollableHeader from './components/ScrollableHeader'
+ 
 import DefaultFlatList from './components/DefaultFlatList'
 //import {FlatList} from 'react'
 import {ContextController} from './context'
-import {View,Text} from 'react-native'
+import {View,Text,ScrollView,Dimensions} from 'react-native'
 
 class App extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
   render(){
     return(
       <ContextController>
@@ -50,15 +54,25 @@ class App extends Component {
         </View> 
         <Posts/> */}
         {/* <ScrollableHeader/> */}
-        <View style={{height:Window.innerHeight,width:Window.innerWidth}}>
+        <View style={{
+          height:Window.innerHeight,
+          width:Window.innerWidth,
+          paddingTop:2,
+          paddingRight:10,
+          paddingLeft:10
+        }}>
+        {/* <View style={{height:Dimensions.get('window').height,width:Dimensions.get('window').width}}> */}
           <AddPost/> 
           <View
             style={{
               flex: 1,
-              height:100
+              height:100,
+              marginTop:1,
+              paddingLeft:2,
+              paddingRight:2,
             }}
           >
-          <Swiper>
+            <Swiper loop={true} autoplayTimeout={5}>
               <View style={{
                 flex: 1,
                 alignItems: "center",
@@ -86,6 +100,34 @@ class App extends Component {
           </Swiper>
           </View>
           <DefaultFlatList/>
+          {/* <View 
+            style={{
+              height:Window.innerHeight-140
+
+            }}
+          >
+            <ScrollView 
+              //onScroll={handleScroll}
+              scrollEventThrottle={1}
+              setVerticalScrollBarEnabled={false}
+              setHorizontalScrollBarEnabled={false}
+              //onScrollBeginDrag={console.log('began')}
+              //onScrollEndDrag={console.log('ended')}
+              //onMomentumScrollBegin={console.log('momentum started')}
+              //onMomentumScrollEnd={console.log('momentum end')}
+              style={{
+                //height:Dimensions.get('window').height*2,
+                backgroundColor:'transparent'
+              }}
+            >
+              
+              <Posts/>
+            </ScrollView>
+            
+          </View> */}
+          {/* <View>
+            <AddPost/> 
+          </View> */}
         </View>
       </ContextController>
     )

@@ -114,6 +114,9 @@ const[userInput,setUserInput,Refs] = useState("")
             returnKeyType='search'
             clearButtonMode="while-editing"
             autoFocus
+            //onFocus={()=>{console.log('on focus')}}
+            theme={{ colors: { placeholder: 'white', text: 'white', primary: 'white', 
+  underlineColor: 'transparent', background: '#003489' } }}
             style={{
               marginLeft:1,
               paddingLeft:3,
@@ -122,6 +125,8 @@ const[userInput,setUserInput,Refs] = useState("")
               alignItems:'center',
               flexDirection:'row',
               flex:1,
+
+              outline:'none',
               //width:1,
               // shadowColor: 'rgba(1, 1, 1, 1)',
               // shadowOffset: {width: 0, height: 0},
@@ -132,6 +137,7 @@ const[userInput,setUserInput,Refs] = useState("")
               // textShadowColor: 'rgba(1, 1, 1, 1)',
               // textShadowOffset: {width: 0, height: 0},
               // textShadowRadius: 5
+              
             }}
           />
         
